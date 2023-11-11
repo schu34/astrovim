@@ -58,7 +58,7 @@ return {
   lazy = {
     defaults = { lazy = true },
     performance = {
-      rtp = {
+    rtp = {
         -- customize default disabled vim plugins
         disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
       },
@@ -81,5 +81,25 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    
+    -- keeps the cursor centered
+    vim.cmd([[
+      nnoremap j jzz
+      nnoremap k kzz
+      nnoremap G Gzz
+      nnoremap } }zz
+      nnoremap { {zz
+      nnoremap n nzz
+      nnoremap N Nzz
+
+      vnoremap j jzz
+      vnoremap k kzz
+      vnoremap G Gzz
+      vnoremap } }zz
+      vnoremap { {zz
+      vnoremap n nzz
+      vnoremap N Nzz
+    
+    ]])
   end,
 }
